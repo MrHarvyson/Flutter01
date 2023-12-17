@@ -16,8 +16,10 @@ class PantallaContador extends StatelessWidget {
           const Text(
             '13',
             style: TextStyle(
-              fontSize: 300,
               color: Colors.white,
+              fontSize: 300,
+              fontWeight: FontWeight.w100,
+              height: 23.0 / 15.0,
             ),
           ),
           Row(

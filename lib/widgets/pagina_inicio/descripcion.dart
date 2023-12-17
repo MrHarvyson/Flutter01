@@ -15,7 +15,10 @@ class Descripcion extends StatelessWidget {
         children: [
           Text(
             'APRENDE A CREAR WEBS CON FLUTTER',
-            style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 45,
+              fontWeight: FontWeight.bold,
+            ),
             maxLines: 2,
           ),
           SizedBox(
