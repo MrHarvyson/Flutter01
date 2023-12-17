@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto01/widgets/intro.dart';
-import 'package:proyecto01/widgets/nav_superior.dart';
+import 'package:proyecto01/widgets/pantalla_contador.dart';
+import 'package:proyecto01/widgets/pantalla_inicio.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,11 +18,8 @@ class MyApp extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              // creamos un widget para la barra superior
-              NavSuperior(),
-              // como el gidget Intro() tiene un double.infinite hay que delimitar el tamaño en su padre por eso
-              // usamos expanded
-              Intro(),
+              PantallaInicio(),
+              PantallaContador(),
             ],
           ),
         ),
