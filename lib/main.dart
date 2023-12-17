@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto01/widgets/pantalla_contador.dart';
-import 'package:proyecto01/widgets/pantalla_inicio.dart';
+import 'package:proyecto01/widgets/pagina_contador/pantalla_contador.dart';
+import 'package:proyecto01/widgets/pagina_inicio/pantalla_inicio.dart';
 
 void main() {
   runApp(const MyApp());

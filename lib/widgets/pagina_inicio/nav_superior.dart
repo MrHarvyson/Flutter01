@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto01/widgets/logo.dart';
-import 'package:proyecto01/widgets/menu.dart';
+import 'package:proyecto01/widgets/pagina_inicio/logo.dart';
+import 'package:proyecto01/widgets/pagina_inicio/menu.dart';
 
 class NavSuperior extends StatelessWidget {
   const NavSuperior({super.key});
@@ -8,12 +8,11 @@ class NavSuperior extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 45),
-      // creamos una fila que estara formada por un logo y el menu
+      padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
       child: Row(
         // alineamos todos los componentes abajo
         crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Logo(),
           SizedBox(),
