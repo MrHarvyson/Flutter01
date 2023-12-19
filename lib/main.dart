@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Ejercicio 01',
-      home: const Scaffold(
+      home: Scaffold(
         body: SingleChildScrollView(
           child: Column(
             children: [

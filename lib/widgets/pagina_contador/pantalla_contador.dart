@@ -1,7 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto01/widgets/pagina_contador/boton.dart';
+import 'package:proyecto01/widgets/pagina_contador/reset.dart';
 
-class PantallaContador extends StatelessWidget {
+class PantallaContador extends StatefulWidget {
   const PantallaContador({super.key});
+
+  @override
+  State<PantallaContador> createState() => _PantallaContadorState();
+}
+
+class _PantallaContadorState extends State<PantallaContador> {
+  int numero = 0;
+
+  // para sumar
+  void _incrementar() {
+    setState(() {
+      numero++;
+    });
+  }
+
+  // para restar
+  void _restar() {
+    setState(() {
+      if (numero > 0) {
+        numero--;
+      }
+    });
+  }
+
+  // reset
+  void _reset() {
+    setState(() {
+      numero = 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +45,9 @@ class PantallaContador extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            '13',
-            style: TextStyle(
+          Text(
+            numero.toString(),
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 300,
               fontWeight: FontWeight.w100,
@@ -23,25 +55,17 @@ class PantallaContador extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  color: const Color.fromARGB(52, 255, 255, 255),
-                  border: Border.all(color: Colors.white, width: 2),
-                ),
-                child: const Center(
-                  child: Text(
-                    '-1',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 60,
-                    ),
-                  ),
-                ),
-              )
+              Boton(onPressed: _restar, texto: '-1'),
+              SizedBox(
+                width: 50,
+              ),
+              Reset(onPressed: _reset),
+              SizedBox(
+                width: 50,
+              ),
+              Boton(onPressed: _incrementar, texto: '+1'),
             ],
           ),
         ],
