@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Boton extends StatelessWidget {
   final VoidCallback onPressed;
   final String texto;
-  Boton({super.key, required this.onPressed, required this.texto});
+  const Boton({super.key, required this.onPressed, required this.texto});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class Boton extends StatelessWidget {
             texto,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 60,
+              fontSize: 20,
             ),
           ),
         ),

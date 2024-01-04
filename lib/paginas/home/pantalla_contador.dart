@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto01/widgets/paginas/home/boton.dart';
-import 'package:proyecto01/widgets/paginas/home/reset.dart';
+import 'package:proyecto01/widgets/boton.dart';
+import 'package:proyecto01/widgets/reset.dart';
 
 class PantallaContador extends StatefulWidget {
   const PantallaContador({super.key});

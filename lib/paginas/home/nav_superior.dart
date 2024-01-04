@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto01/widgets/paginas/home/logo.dart';
-import 'package:proyecto01/widgets/paginas/home/menu.dart';
+import 'package:proyecto01/paginas/home/logo.dart';
+import 'package:proyecto01/paginas/home/menu.dart';
 
 class NavSuperior extends StatelessWidget {
   const NavSuperior({super.key});
