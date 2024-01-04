@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto01/widgets/pagina_inicio/intro.dart';
-import 'package:proyecto01/widgets/pagina_inicio/nav_superior.dart';
+import 'package:proyecto01/widgets/paginas/home/intro.dart';
+import 'package:proyecto01/widgets/paginas/home/nav_superior.dart';
 
 class PantallaInicio extends StatelessWidget {
   const PantallaInicio({super.key});

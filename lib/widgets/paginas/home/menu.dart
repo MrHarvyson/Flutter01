@@ -5,7 +5,7 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       // alineamos todo el contendio abajo
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
@@ -29,11 +29,14 @@ class Menu extends StatelessWidget {
         SizedBox(
           width: 50,
         ),
-        Text(
-          'About',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
+        GestureDetector(
+          onTap: () => Navigator.pushNamed(context, '/about'),
+          child: Text(
+            'About',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         SizedBox(

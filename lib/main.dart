@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:proyecto01/widgets/pagina_contador/pantalla_contador.dart';
-import 'package:proyecto01/widgets/pagina_inicio/pantalla_inicio.dart';
+import 'package:proyecto01/widgets/paginas/about/about.dart';
+import 'package:proyecto01/widgets/paginas/home/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,16 +21,11 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Ejercicio 01',
-      home: const Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              PantallaInicio(),
-              PantallaContador(),
-            ],
-          ),
-        ),
-      ),
+      initialRoute: '/home',
+      routes: {
+        '/home': (_) => Home(),
+        '/about': (_) => About(),
+      },
     );
   }
 }
