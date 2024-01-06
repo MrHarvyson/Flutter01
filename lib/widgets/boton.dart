@@ -18,13 +18,21 @@ class Boton extends StatelessWidget {
           border: Border.all(color: Colors.white, width: 2),
         ),
         child: Center(
-          child: Text(
-            texto,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
-          ),
+          child: texto.isNotEmpty
+              ? Text(
+                  texto,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                  ),
+                )
+              : const Center(
+                  child: Icon(
+                    Icons.restart_alt_rounded,
+                    color: Colors.white,
+                    size: 50,
+                  ),
+                ),
         ),
       ),
     );

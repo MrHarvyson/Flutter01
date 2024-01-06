@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       title: 'Ejercicio 01',
       initialRoute: '/home',
       routes: {
-        '/home': (_) => Home(),
-        '/about': (_) => About(),
+        '/home': (_) => const Home(),
+        '/about': (_) => const About(),
       },
     );
   }

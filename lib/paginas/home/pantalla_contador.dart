@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto01/widgets/boton.dart';
-import 'package:proyecto01/widgets/reset.dart';
 
 class PantallaContador extends StatefulWidget {
   const PantallaContador({super.key});
@@ -61,7 +60,10 @@ class _PantallaContadorState extends State<PantallaContador> {
               SizedBox(
                 width: 50,
               ),
-              Reset(onPressed: _reset),
+              Boton(
+                onPressed: _reset,
+                texto: '',
+              ),
               SizedBox(
                 width: 50,
               ),
