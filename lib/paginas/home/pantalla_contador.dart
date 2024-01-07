@@ -44,31 +44,38 @@ class _PantallaContadorState extends State<PantallaContador> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            numero.toString(),
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 300,
-              fontWeight: FontWeight.w100,
-              height: 23.0 / 15.0,
+          FittedBox(
+            child: Text(
+              numero.toString(),
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 300,
+                fontWeight: FontWeight.w100,
+                height: 23.0 / 15.0,
+              ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Boton(onPressed: _restar, texto: '-1'),
-              SizedBox(
-                width: 50,
+          FittedBox(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Boton(onPressed: _restar, texto: '-1'),
+                  SizedBox(
+                    width: 50,
+                  ),
+                  Boton(
+                    onPressed: _reset,
+                    texto: '',
+                  ),
+                  SizedBox(
+                    width: 50,
+                  ),
+                  Boton(onPressed: _incrementar, texto: '+1'),
+                ],
               ),
-              Boton(
-                onPressed: _reset,
-                texto: '',
-              ),
-              SizedBox(
-                width: 50,
-              ),
-              Boton(onPressed: _incrementar, texto: '+1'),
-            ],
+            ),
           ),
         ],
       ),

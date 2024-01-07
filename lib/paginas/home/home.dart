@@ -9,47 +9,88 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 200),
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height,
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 100),
                 child: Column(
                   children: [
-                    // creamos un widget para la barra superior
                     const NavSuperior(),
-                    // como el gidget Intro() tiene un double.infinite hay que delimitar el tamaño en su padre por eso
-                    // usamos expanded
                     Expanded(
-                        child: SizedBox(
-                      height: double.infinity,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Descripcion(),
-                          SizedBox(
-                            width: 300,
-                            height: 50,
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.blue,
-                              ),
-                              child: const Text(
-                                'Iniciar Curso',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
+                      child: screenWidth > 900
+                          ? Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                const Flexible(
+                                  flex: 3,
+                                  child: FittedBox(
+                                    child: Descripcion(),
+                                  ),
                                 ),
-                              ),
+                                Flexible(
+                                  flex: 1,
+                                  child: FittedBox(
+                                    child: SizedBox(
+                                      width: 250,
+                                      height: 75,
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+                                        ),
+                                        child: const Text(
+                                          'Iniciar Curso',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          : Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                const Flexible(
+                                  flex: 3,
+                                  child: FittedBox(
+                                    child: Descripcion(),
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  child: FittedBox(
+                                    child: SizedBox(
+                                      width: 250,
+                                      height: 75,
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+                                        ),
+                                        child: const Text(
+                                          'Iniciar Curso',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                        ],
-                      ),
-                    )),
+                    ),
                   ],
                 ),
               ),
