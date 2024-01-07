@@ -6,7 +6,7 @@ class Descripcion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      // alinemos el texto
+      // alinemos el texto a la izquierda
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

@@ -11,30 +11,35 @@ class NavSuperior extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
-      child: screenWidth > 900
-          ? const Row(
-              // alineamos todos los componentes abajo
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Logo(),
-                SizedBox(),
-                Menu(),
-              ],
-            )
-          : const FittedBox(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Logo(),
-                  SizedBox(
-                    height: 50,
+      child:
+          //----------------------en el caso que la pantalla sea mayor a 900 px
+          screenWidth > 900
+              ? const Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Logo(),
+                    SizedBox(),
+                    Menu(),
+                  ],
+                )
+              :
+              //-----------------------------------en caso que sea menor de 900
+              const FittedBox(
+                  //-----------lo convertiremos en una columna para poner el logo
+                  //por encima
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Logo(),
+                      SizedBox(
+                        height: 50,
+                      ),
+                      Menu(),
+                    ],
                   ),
-                  Menu(),
-                ],
-              ),
-            ),
+                ),
     );
   }
 }

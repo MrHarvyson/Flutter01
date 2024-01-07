@@ -9,29 +9,29 @@ class Menu extends StatelessWidget {
       // alineamos todo el contendio abajo
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Text(
+        const Text(
           'Inicio',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 50,
         ),
-        Text(
+        const Text(
           'Widgets',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 50,
         ),
         GestureDetector(
           onTap: () => Navigator.pushNamed(context, '/about'),
-          child: Text(
+          child: const Text(
             'About',
             style: TextStyle(
               fontSize: 20,
@@ -39,10 +39,10 @@ class Menu extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 50,
         ),
-        Icon(
+        const Icon(
           Icons.search,
           color: Colors.grey,
           size: 35,

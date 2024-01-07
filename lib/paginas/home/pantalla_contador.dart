@@ -44,6 +44,7 @@ class _PantallaContadorState extends State<PantallaContador> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          //-----------------------------------------------numero del contador
           FittedBox(
             child: Text(
               numero.toString(),
@@ -55,21 +56,22 @@ class _PantallaContadorState extends State<PantallaContador> {
               ),
             ),
           ),
+          //--------------------------------------botones sumar, reset y restar
           FittedBox(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Boton(onPressed: _restar, texto: '-1'),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   Boton(
                     onPressed: _reset,
                     texto: '',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   Boton(onPressed: _incrementar, texto: '+1'),
