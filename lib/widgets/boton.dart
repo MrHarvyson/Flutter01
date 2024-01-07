@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Boton extends StatelessWidget {
+  //-------------------------creamos variables que pasaremos por el constructor
   final VoidCallback onPressed;
   final String texto;
   const Boton({super.key, required this.onPressed, required this.texto});
@@ -18,21 +19,25 @@ class Boton extends StatelessWidget {
           border: Border.all(color: Colors.white, width: 2),
         ),
         child: Center(
-          child: texto.isNotEmpty
-              ? Text(
-                  texto,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                  ),
-                )
-              : const Center(
-                  child: Icon(
-                    Icons.restart_alt_rounded,
-                    color: Colors.white,
-                    size: 50,
-                  ),
-                ),
+          child:
+              //----------------si se pasa texto tendra el boton el texto pasado
+              texto.isNotEmpty
+                  ? Text(
+                      texto,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                      ),
+                    )
+                  :
+                  //--------------en caso contrario se pondrá el icono de reset
+                  const Center(
+                      child: Icon(
+                        Icons.restart_alt_rounded,
+                        color: Colors.white,
+                        size: 50,
+                      ),
+                    ),
         ),
       ),
     );
